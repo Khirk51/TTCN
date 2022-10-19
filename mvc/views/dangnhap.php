@@ -29,13 +29,13 @@ include_once("public/includeSig/header.php");
             </div>
             
             <div class="d-flex justify-content-center form_container">
-                <form  method="POST" action="Dangnhap/dangnhap" style="width: 320px" >
+                <form  method="POST" action="Taikhoan/dangnhap" style="width: 320px" >
 
                  
                   
                     <div class="input-group mb-3">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-user"></i></span> </div>
-                        <input id="usernameTxt" type="text"  value = " <?php if(isset($data["username"])) echo $data["username"]; ?>" name="usernameTxt" class="form-control input_user" placeholder="Tài khoản" required>
+                        <input id="usernameTxt" type="text"  <?php if(isset($data["username"])) echo 'value = "'.$data["username"].'"'; ?> name="usernameTxt" class="form-control input_user" placeholder="Tài khoản" required>
                     </div>
                     <div class="input-group mb-4">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-key"></i></span> </div>
@@ -49,10 +49,10 @@ include_once("public/includeSig/header.php");
             </div>
           
             <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Dangky"; ?>">Bạn chưa có tài khoản?</a> </div>
+                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Taikhoan/Dangky"; ?>">Bạn chưa có tài khoản?</a> </div>
             </div>
             <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Quenmatkhau"; ?>">Quên mật khẩu?</a> </div>
+                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Taikhoan/Quenmatkhau"; ?>">Quên mật khẩu?</a> </div>
             </div>
         </div>
         

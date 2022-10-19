@@ -29,10 +29,10 @@ include_once("public/includeSig/header.php");
             </div>
             
             <div class="d-flex justify-content-center form_container">
-                <form  method="POST" action="Dangky/dangky" style="width: 320px" >
+                <form  method="POST" action="Taikhoan/dangky" style="width: 320px" >
                     <div class="input-group mb-3">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-user"></i></span> </div>
-                        <input value = " <?php if(isset($data["username"])) echo $data["username"]; ?>" id="usernameTxt" type="text" name="usernameTxt" class="form-control input_user" placeholder="Tài khoản"  autocomplete="off" required>
+                        <input <?php if(isset($data["username"])) echo 'value = "'.$data["username"].'"'; ?> id="usernameTxt" type="text" name="usernameTxt" class="form-control input_user" placeholder="Tài khoản"  autocomplete="off" required>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-key"></i></span> </div>
@@ -44,11 +44,11 @@ include_once("public/includeSig/header.php");
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-envelope"></i></span> </div>
-                        <input  value = " <?php if(isset($data["email"])) echo $data["email"]; ?>" id="usernameTxt" type="email"  name="emailTxt" class="form-control input_email" placeholder="Email" autocomplete="off"  required>
+                        <input   <?php if(isset($data["email"])) echo 'value = "'.$data["email"].'"'; ?> id="usernameTxt" type="email"  name="emailTxt" class="form-control input_email" placeholder="Email" autocomplete="off"  required>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-append"> <span class="input-group-text"><i class="fas fa-user"></i></span> </div>
-                        <input value = " <?php if(isset($data["name"])) echo $data["name"]; ?>" id="usernameTxt" type="text"  name="nameTxt" class="form-control input_user" placeholder="Tên hiển thị" autocomplete="off"  required>
+                        <input <?php if(isset($data["name"])) echo 'value = "'.$data["name"].'"'; ?> id="usernameTxt" type="text"  name="nameTxt" class="form-control input_user" placeholder="Tên hiển thị" autocomplete="off"  required>
                     </div>
                     <div class="d-flex justify-content-center mt-3 login_container">
                         <input  type="submit"  name="btnReg" id="btnReg" class="btn login_btn" value="Đăng ký">
@@ -57,10 +57,10 @@ include_once("public/includeSig/header.php");
             </div>
           
             <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT.'/Dangnhap';?>">Bạn đã có tài khoản?</a> </div>
+                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT.'/Taikhoan/Dangnhap';?>">Bạn đã có tài khoản?</a> </div>
             </div>
             <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT.'/Quenmatkhau';?>">Quên mật khẩu?</a> </div>
+                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT.'/Taikhoan/Quenmatkhau';?>">Quên mật khẩu?</a> </div>
             </div>
         </div>
         
