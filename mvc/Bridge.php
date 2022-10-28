@@ -1,6 +1,6 @@
 <?php
 //url
-define("URLDEFAULT", "/MNM");
+define("URLDEFAULT", "/TTCN");
 
 // Process URL from browser
 require_once "./mvc/core/App.php";

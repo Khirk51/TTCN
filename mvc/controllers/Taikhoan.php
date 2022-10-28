@@ -23,9 +23,12 @@ class Taikhoan extends Controller{
             if(empty($username) || empty($password)){
                 $this->view('dangnhap',["result"=>"Nhập đầy đủ thông tin để đăng nhập!"]);
             }else{
-                $result = $this->taikhoanModel->dangnhap($username,md5($password));
+                $result = $this->taikhoanModel->login($username,md5($password));
                 if($result["status"] != 1){
-                    //$this->view('dangnhap',["result"=>$result["msg"]]);
+                    $this->view('dangnhap',["result"=>$result["msg"]]);
+                }else{
+                    $_SESSION["userInfo"] = $result["userInfo"];
+                    header("location: Trangchu");
                 }
             }
            // $result = $this->taikhoanModel->info($username);
@@ -37,7 +40,7 @@ class Taikhoan extends Controller{
 
     //dangxuat
     function dangxuat(){
-        unset($_SESSION["id"]);
+        unset($_SESSION["userInfo"]);
         session_destroy();
         $this->view('dangnhap',[]);
     }
