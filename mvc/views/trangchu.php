@@ -1,8 +1,9 @@
 <?php
-    if(!isset($_SESSION["id"])){
-        header("location: ".URLDEFAULT."/Dangnhap");
+    if(!isset($_SESSION["user"])){
+        header("location: ".URLDEFAULT."/Taikhoan");
         exit;
     }
 ?>
 
-<a href="<?php echo URLDEFAULT."/Dangnhap/dangxuat"; ?>"> đăng xuất </a>
+<a href="<?php echo URLDEFAULT."/Trangcanhan"; ?>"> trang cá nhân </a> <br>
+<a href="<?php echo URLDEFAULT."/Taikhoan/dangxuat"; ?>"> đăng xuất </a>

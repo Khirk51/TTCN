@@ -5,7 +5,7 @@ class DB{
     public $conn;
     protected $servername = "localhost";
     protected $username = "root";
-    protected $password = "";
+    protected $password = "root";
     protected $dbname = "GTPT";
 
     function __construct(){

@@ -48,12 +48,10 @@ include_once("public/includeSig/header.php");
                 </form>
             </div>
           
-            <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Taikhoan/Dangky"; ?>">Bạn chưa có tài khoản?</a> </div>
+            <div  class="mt-4">
+                <center>(Đăng nhập bằng tài khoản student.vinhuni.edu.vn)  </center>  
             </div>
-            <div class="mt-4">
-                <div class="d-flex justify-content-center links"><a href="<?php echo URLDEFAULT."/Taikhoan/Quenmatkhau"; ?>">Quên mật khẩu?</a> </div>
-            </div>
+           
         </div>
         
     </div>
