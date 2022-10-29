@@ -9,7 +9,7 @@ if(isset($_SESSION["userInfo"])){
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <base href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/TTCN/">
+  <base href="http://<?php echo $_SERVER['SERVER_NAME'].":8888".URLDEFAULT;?>\">
   <title><?php if(isset($title) )echo  $title; else echo "Thực hành 4";?></title>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="public/css/style.css">

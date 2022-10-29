@@ -28,6 +28,7 @@ class Taikhoan extends Controller{
                     $this->view('dangnhap',["result"=>$result["msg"]]);
                 }else{
                     $_SESSION["userInfo"] = $result["userInfo"];
+                    
                     header("location: Trangchu");
                 }
             }

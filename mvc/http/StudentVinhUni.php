@@ -28,12 +28,13 @@
            }
   
            // crawl thông tin học sinh
-           $msv =  $htmlLogin->find(".container #lblStudentCode",0);
-           $hoten =  $htmlLogin->find(".container #lblStudentName",0);
-           $lop =  $htmlLogin->find(".container #lblAdminClass",0);
-           $nganh = explode("-",$lop)[1];
-           $lop = explode("-",$lop)[0];
-           $khoa =  $htmlLogin->find(".container #lblAy",0);
+           $msv =  ($htmlLogin->find(".container #lblStudentCode",0)->plaintext);
+           $hoten =  ($htmlLogin->find(".container #lblStudentName",0)->plaintext);
+           $lopex =  ($htmlLogin->find(".container #lblAdminClass",0)->plaintext);
+           $arrString = explode("-",$lopex);
+           $nganh = $arrString[count($arrString)-1];
+           $lop = $arrString[count($arrString)-2];
+           $khoa =  ($htmlLogin->find(".container #lblAy",0)->plaintext);
            if(empty($msv)||empty($hoten)||empty($lop)||empty($khoa)||empty($nganh)){
                  $result["msg"] = "Lỗi! Không lấy được thông tin sinh viên!";
                  return $result;

@@ -16,7 +16,7 @@ include_once("public/includeSig/header.php");
     <div class="d-flex justify-content-center h-50" >
     <?php
             if(isset($data["result"])){
-                echo' <div  style="position: absolute; left:55%;border-bottom: 2px;border-radius: 40px 40px 40px 0px;top: 18%;outline: 2px solid #1C6EA4;outline-offset: 0px;" class="alert alert-danger " role="alert">
+                echo' <div  style="position: absolute; left:56%;border-bottom: 2px;border-radius: 40px 40px 40px 0px;top: 16%;outline: 2px solid #1C6EA4;outline-offset: 0px;" class="alert alert-danger " role="alert">
                 '.$data["result"].'
             </div>';
             }
