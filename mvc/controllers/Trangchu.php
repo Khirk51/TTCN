@@ -2,10 +2,14 @@
 
 
 class Trangchu extends Controller{
+    private $accountModel;
 
-    // Must have SayHi()
+    function __construct(){
+      $this->accountModel = $this->model("DataAccountModel");
+   }
+
     function product(){
-      $this->view('trangchu');
+      $this->view('trangchu',["userData" => $this->accountModel->getAllData($_SESSION["userInfo"]["msv"],"sinhvien")]);
     }
 
 }
